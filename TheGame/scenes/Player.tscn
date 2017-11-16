@@ -6,17 +6,17 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 17.701, 30.1496 )
+extents = Vector2( 17, 22.4495 )
 
 [node name="Player" type="KinematicBody2D"]
 
 transform/pos = Vector2( -0.858551, 0.429283 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, -1.28783, 1.50247 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -1.2758, 7.53885 )
 shapes/0/trigger = false
 collision/layers = 1
-collision/mask = 1
+collision/mask = 1025
 collision/margin = 0.08
 script/script = ExtResource( 1 )
 
@@ -30,9 +30,37 @@ frame = 20
 
 [node name="Shape" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( -1.28783, 1.50247 )
+transform/pos = Vector2( -1.2758, 7.53885 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
+
+[node name="RayTop" type="RayCast2D" parent="."]
+
+enabled = true
+cast_to = Vector2( 0, -43 )
+layer_mask = 1024
+type_mask = 15
+
+[node name="RayBottom" type="RayCast2D" parent="."]
+
+enabled = true
+cast_to = Vector2( 0, 43 )
+layer_mask = 1024
+type_mask = 15
+
+[node name="RayLeft" type="RayCast2D" parent="."]
+
+enabled = true
+cast_to = Vector2( -30, 0 )
+layer_mask = 1024
+type_mask = 15
+
+[node name="RayRight" type="RayCast2D" parent="."]
+
+enabled = true
+cast_to = Vector2( 30, 0 )
+layer_mask = 1024
+type_mask = 15
 
 
