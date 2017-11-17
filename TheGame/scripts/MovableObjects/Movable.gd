@@ -27,6 +27,7 @@ func _fixed_process(delta):
 			move(final_movement)
 
 func push_to(speed, direction):
+	print("push")
 	self.speed = speed
 	self.direction = direction
 	
