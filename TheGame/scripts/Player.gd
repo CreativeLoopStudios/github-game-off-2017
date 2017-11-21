@@ -74,7 +74,6 @@ func _fixed_process(delta):
 		if body_grabbed and rays_colliding:
 			is_grabbing = true
 			body_grabbed.push_to(speed, direction)
-			print(direction)
 		else:
 			cancel_grab()
 	else:

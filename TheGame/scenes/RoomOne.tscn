@@ -128,7 +128,8 @@ transform/pos = Vector2( 393.901, 329.434 )
 
 [node name="Desk" parent="YSort" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 216.904, 151.699 )
+editor/display_folded = true
+transform/pos = Vector2( 210.702, 153.099 )
 
 [node name="BookCase" parent="YSort" instance=ExtResource( 4 )]
 
